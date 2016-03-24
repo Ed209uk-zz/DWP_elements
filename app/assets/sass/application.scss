@@ -44,7 +44,8 @@
 .heading-medium,
 .heading-small,
 .lede,
-ul, p, a{
+ul, p, a,
+#global-header .header-proposition #proposition-name{
 font-family: 'Noto Sans', sans-serif;
 }
 h1.heading-xlarge{margin-top:40px; margin-bottom:20px;}
