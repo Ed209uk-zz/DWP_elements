@@ -7,100 +7,239 @@
 {% block content %}
 
 <main id="content" role="main">
-
-
   <h1 class="heading-xlarge">DWP internal elements guide</h1>
 
   <div class="grid-row">
+    <p class="lede">
+      This guide explains how to use elements for internal DWP services and
+      services that aren’t hosted on a GOV.UK domain.
+    </p>
 
-    <div class="column-two-thirds">
-      <p class="lede">This guide explains how to use elements for internal DWP services and services that aren’t hosted on a GOV.UK domain.</p>
-<p>You should use these elements in addition to the standard <a href="http://govuk-elements.herokuapp.com/">GOV.UK design elements</a>.</p>
+    <p>
+      You should use these elements in addition to the standard
+      <a href="http://govuk-elements.herokuapp.com/">GOV.UK design elements</a>.
+    </p>
 
-<p>They should be used when you’re working on:</p>
-<ul class="list-bullet">
-  <li>a staff-facing DWP service hosted on GOV.UK (this could be the staff interface of a public-facing service)</li>
-  <li>a public or staff-facing DWP service that isn’t hosted on GOV.UK</li>
-</ul>
+    <p>They should be used when you’re working on:</p>
 
-<h2 class="heading-large">Top bar</h2>
+    <ul class="list-bullet">
+      <li>a staff-facing DWP service hosted on GOV.UK (this could be the staff interface of a public-facing service)</li>
+      <li>a public or staff-facing DWP service that isn’t hosted on GOV.UK</li>
+    </ul>
 
-<h3 class="heading-medium">Version 1 - for a staff-facing service on GOV.UK</h3>
+    <h2 class="heading-large">Top bar</h2>
+    <h3 class="heading-medium">Version 1 - for a staff-facing service on GOV.UK</h3>
+    <p>
+      The crown indicates that the service has been built to meet the
+      Digital-by-Default service standards.
+    </p>
 
-<p>The crown indicates that the service has been built to meet the Digital-by-Default service standards.</p>
+    <header role="banner" id="global-header" class="with-proposition">
+      <div class="header-wrapper">
+        <div class="header-global">
+          <div class="header-logo">
+            <a href="/" title="Go to the homepage" id="logo" class="content">
+              <img src="/public/stylesheets/images/gov.uk_logotype_crown.png" alt="">
+            </a>
+          </div>
+        </div>
 
-<img src="/public/images/TopBar_V1@2x.png" alt="" width="1024" height="53" style="margin-left:-32px" />
+        <div class="header-proposition">
+          <div class="content">
+            <nav id="proposition-menu" class="header__menu" role="navigation">
+              <a href="/" id="proposition-name">Title of the service</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
 
-<p><a href="">View code snippet</a></p>
+    <p>
+      <details>
+        <summary><span class="summary">View code snippet</span></summary>
+        <div class="panel panel-border-narrow">
+          <pre class="language-markup">
+            <code>
+                &lt;header role="banner" id="global-header" class="with-proposition"&gt;
+                  &lt;div class="header-wrapper"&gt;
+                    &lt;div class="header-global"&gt;
+                      &lt;div class="header-logo"&gt;
+                        &lt;a href="/" title="Go to the homepage" id="logo" class="content"&gt;
+                          &lt;img src="/public/stylesheets/images/gov.uk_logotype_crown.png" alt=""&gt;
+                        &lt;/a&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
 
+                    &lt;div class="header-proposition"&gt;
+                      &lt;div class="content"&gt;
+                        &lt;nav id="proposition-menu" class="header__menu" role="navigation"&gt;
+                          &lt;a href="/" id="proposition-name"&gt;Title of the service&lt;/a&gt;
+                        &lt;/nav&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/header&gt;
+            </code>
+          </pre>
+        </div>
+      </details>
+    </p>
 
-<h3 class="heading-medium">Version 2 - for any service that isn’t on GOV.UK</h3>
+    <h3 class="heading-medium">Version 2 - for any service that isn’t on GOV.UK</h3>
 
-<img src="/public/images/TopBar_V2@2x.png" alt="" width="1024" height="53" style="margin-left:-32px" />
+    <header role="banner" id="global-header" class="with-proposition">
+      <div class="header-wrapper">
+        <div class="header-global">
+          <div class="header-logo">
+          </div>
+        </div>
 
+        <div class="header-proposition">
+          <div class="content">
+            <nav id="proposition-menu" class="header__menu" role="navigation">
+              <a href="/" id="proposition-name">Title of the service</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
 
-<p><a href="">View code snippet</a></p>
+    <p>
+      <details>
+        <summary><span class="summary">View code snippet</span></summary>
+        <div class="panel panel-border-narrow">
+          <pre class="language-markup">
+            <code>
+                &lt;header role="banner" id="global-header" class="with-proposition"&gt;
+                  &lt;div class="header-wrapper"&gt;
+                    &lt;div class="header-global"&gt;
+                      &lt;div class="header-logo"&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
 
-<h3 class="heading-medium">Functionality in the top bar</h3>
+                    &lt;div class="header-proposition"&gt;
+                      &lt;div class="content"&gt;
+                        &lt;nav id="proposition-menu" class="header__menu" role="navigation"&gt;
+                          &lt;a href="/" id="proposition-name"&gt;Title of the service&lt;/a&gt;
+                        &lt;/nav&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/header&gt;
+            </code>
+          </pre>
+        </div>
+      </details>
+    </p>
 
-<p>There shouldn’t be any interactive elements in the top bar. Research by GDS and others shows that users find it difficult to see them.</p>
+    <h3 class="heading-medium">Functionality in the top bar</h3>
+    <p>
+      There shouldn’t be any interactive elements in the top bar. Research
+      by GDS and others shows that users find it difficult to see them.
+    </p>
 
-<h3 class="heading-medium">Alpha and beta banners</h3>
-<p>Only use a banner if the service is part of a Digital-by-Default service.</p>
+    <h3 class="heading-medium">Alpha and beta banners</h3>
+    <p>
+      Only use a banner if the service is part of a Digital-by-Default
+      service.
+    </p>
 
-<h3 class="heading-medium">Naming internal services</h3>
-<p>The name of an internal system should be consistent with the name of the public-facing service it supports. This could be the operational service function like ‘Universal Credit’ or a verb that states the core function of a standalone tool like ‘(Make a) Real Time Information request’.</p>
+    <h3 class="heading-medium">Naming internal services</h3>
+    <p>
+      The name of an internal system should be consistent with the name of
+      the public-facing service it supports. This could be the operational
+      service function like ‘Universal Credit’ or a verb that states the
+      core function of a standalone tool like ‘(Make a) Real Time Information
+      request’.
+    </p>
 
-<h2 class="heading-large">Footer</h2>
+    <h2 class="heading-large">Footer</h2>
 
-<h3 class="heading-medium">Version 1 - for a public-facing service not on GOV.UK</h3>
-<p>This footer is similar to the standard one. It should always say: ‘Built by DWP Digital’. Work with your service team to decide which other links to include.</p>
+    <h3 class="heading-medium">Version 1 - for a public-facing service not on GOV.UK</h3>
+    <p>
+      This footer is similar to the standard one. It should always say:
+      ‘Built by DWP Digital’. Work with your service team to decide which
+      other links to include.
+    </p>
 
-<img src="/public/images/Footer_V1@2x.png" alt="" width="1024" height="256" style="margin-left:-32px" />
+    <img src="/public/images/Footer_V1@2x.png" alt="" width="1024" height="256" style="margin-left:-32px" />
 
+    <p><a href="">View code snippet</a></p>
 
-<p><a href="">View code snippet</a></p>
+    <p>
+      It’s not necessary to display a footer on staff-facing services but
+      you may find it useful. Don’t display a footer on staff-facing services.
+    </p>
 
-<p>It’s not necessary to display a footer on staff-facing services but you may find it useful.
-Don’t display a footer on staff-facing services.</p>
+    <h2 class="heading-large">Typography</h2>
 
-<h2 class="heading-large">Typography</h2>
+    <h3 class="heading-medium">Font</h3>
 
-<h3 class="heading-medium">Font</h3>
+    <p>
+      <span style="font-weight:700">GDS Transport Website (light and bold)</span>
+      - for a staff-facing service on GOV.UK
+    </p>
 
-<p><span style="font-weight:700">GDS Transport Website (light and bold)</span> - for a staff-facing service on GOV.UK</p>
-<p><span style="font-weight:700">Noto Sans</span> - for any service that isn’t on GOV.UK</b></p>
-<p>This is a free, open source font. We can’t use GDS Transport Website because of licensing restrictions.</p>
+    <p>
+      <span style="font-weight:700">Noto Sans</span> - for any service that
+      isn’t on GOV.UK</b>
+    </p>
 
-<h3 class="heading-medium">Colour</h3>
-<p>Use the extensive <a href="http://govuk-elements.herokuapp.com/colour/">GOV.UK colour palette</a> for all services, whether public or staff-facing. You can reduce the strength of colours by using tints of 50% and 25%.</p>
+    <p>
+      This is a free, open source font. We can’t use GDS Transport Website
+      because of licensing restrictions.
+    </p>
 
-<h3 class="heading-medium">Layout</h3>
-<p>Use the standard GOV.UK layout <a href="http://govuk-elements.herokuapp.com/errors/">guidelines</a> wherever possible. Consider whether you can design a better experience by using the full width of the screen eg for a staff-facing service that will only be used on a wide-screen monitor.
+    <h3 class="heading-medium">Colour</h3>
+    <p>
+      Use the extensive <a href="http://govuk-elements.herokuapp.com/colour/">GOV.UK colour palette</a>
+      for all services, whether public or staff-facing. You can reduce the
+      strength of colours by using tints of 50% and 25%.
+    </p>
 
-Use the menu pattern in the DWP pattern library for sub-navigation in a staff-facing service.</p>
+    <h3 class="heading-medium">Layout</h3>
+    <p>
+      Use the standard GOV.UK layout <a href="http://govuk-elements.herokuapp.com/errors/">guidelines</a>
+      wherever possible. Consider whether you can design a better experience
+      by using the full width of the screen eg for a staff-facing service
+      that will only be used on a wide-screen monitor. Use the menu pattern
+      in the DWP pattern library for sub-navigation in a staff-facing service.
+    </p>
 
-<h3 class="heading-medium">Icons</h3>
-<p>Use icons sparingly on public-facing services. You may find them more useful on staff-facing services. Icons must be consistent across services.
-More guidance around icons will be created if necessary.</p>
+    <h3 class="heading-medium">Icons</h3>
+    <p>
+      Use icons sparingly on public-facing services. You may find them more
+      useful on staff-facing services. Icons must be consistent across services.
+      More guidance around icons will be created if necessary.
+    </p>
 
-<h3 class="heading-medium">Form elements</h3>
-<p>Use the GOV.UK <a href="http://govuk-elements.herokuapp.com/form-elements/">guidelines</a> for all services.</p>
+    <h3 class="heading-medium">Form elements</h3>
+    <p>
+      Use the GOV.UK <a href="http://govuk-elements.herokuapp.com/form-elements/">guidelines</a>
+      for all services.
+    </p>
 
-<p>Consider that forms within staff interfaces are likely to be used repetitively, every day. You may find it’s necessary to use non-standard elements such as drop-down lists. Test these thoroughly before implementing them.</p>
+    <p>
+      Consider that forms within staff interfaces are likely to be used
+      repetitively, every day. You may find it’s necessary to use non-standard
+      elements such as drop-down lists. Test these thoroughly before
+      implementing them.
+    </p>
 
-<p>Don’t assume that staff will understand your interface the first time they see it. Not everyone will be a ‘power user’.</p>
+    <p>
+      Don’t assume that staff will understand your interface the first time
+      they see it. Not everyone will be a ‘power user’.
+    </p>
 
-<h3 class="heading-medium">Errors and validation</h3>
-<p>Use the standard <a href="http://govuk-elements.herokuapp.com/errors/">guidelines</a> in the GOV.UK elements library.</p>
-    </div>
-
-    <div class="column-one-third">
-
-    </div>
-
+    <h3 class="heading-medium">Errors and validation</h3>
+    <p>Use the standard <a href="http://govuk-elements.herokuapp.com/errors/">guidelines</a>
+      in the GOV.UK elements library.
+    </p>
   </div>
 
+  <div class="column-one-third">
+
+  </div>
 </main>
 
 {% endblock %}
