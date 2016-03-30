@@ -1,0 +1,184 @@
+{% extends "layout_dwp.html" %}
+
+{% block page_title %}
+  DWP Elements guide
+{% endblock %}
+
+{% block content %}
+  <main id="content" role="main">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <div class="breadcrumbs">
+          <ol>
+            <li><a href="/">DWP Elements</a></li>
+            <li><a href="/header">Header</a></li>
+          </ol>
+        </div>
+
+        <h1 class="heading-xlarge">
+          <span class="heading-secondary">DWP elements</span>
+          Header
+        </h1>
+
+        <p class="lede">
+          There should be no functionality or interactive elements in the top bar. Research
+          by GDS and others shows that users find it difficult to see them.
+        </p>
+
+        <h3 class="heading-large">
+          Version 1
+          <span class="heading-secondary">for a staff-facing service on GOV.UK</span>
+        </h3>
+
+        <p>
+          The crown indicates that the service has been built to meet the
+          Digital-by-Default service standards.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid-row">
+      <header role="banner" id="global-header" class="with-proposition">
+        <div class="header-wrapper">
+          <div class="header-global">
+            <div class="header-logo">
+              <a href="/" title="Go to the homepage" id="logo" class="content">
+                <img src="/public/stylesheets/images/gov.uk_logotype_crown.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="header-proposition">
+            <div class="content">
+              <nav id="proposition-menu" class="header__menu" role="navigation">
+                <a href="/" id="proposition-name">Title of the service</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <p>
+        <details>
+          <summary><span class="summary">View code snippet</span></summary>
+          <div class="panel panel-border-narrow">
+            <div class="tab-panel">
+              <div class="tab-panel-menu">
+                <a href="#" class="tab-link">HTML</a>
+                <a href="#" class="tab-link">CSS</a>
+              </div>
+
+              <div class="tab-panes">
+                <div class="tab-pane">
+                  <pre class="language-markup">
+                    <code>
+                        &lt;header role="banner" id="global-header" class="with-proposition"&gt;
+                          &lt;div class="header-wrapper"&gt;
+                            &lt;div class="header-global"&gt;
+                              &lt;div class="header-logo"&gt;
+                                &lt;a href="/" title="Go to the homepage" id="logo" class="content"&gt;
+                                  &lt;img src="/public/stylesheets/images/gov.uk_logotype_crown.png" alt=""&gt;
+                                &lt;/a&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class="header-proposition"&gt;
+                              &lt;div class="content"&gt;
+                                &lt;nav id="proposition-menu" class="header__menu" role="navigation"&gt;
+                                  &lt;a href="/" id="proposition-name"&gt;Title of the service&lt;/a&gt;
+                                &lt;/nav&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/header&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane">
+                  <pre class="language-css">
+                    <code>
+                      CSS
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+      </p>
+
+      <h3 class="heading-large">
+        Version 2
+        <span class="heading-secondary">for any service that isn’t on GOV.UK</span>
+      </h3>
+
+      <header role="banner" id="global-header" class="with-proposition">
+        <div class="header-wrapper">
+          <div class="header-global">
+            <div class="header-logo">
+            </div>
+          </div>
+
+          <div class="header-proposition">
+            <div class="content">
+              <nav id="proposition-menu" class="header__menu" role="navigation">
+                <a href="/" id="proposition-name">Title of the service</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <p>
+        <details>
+          <summary><span class="summary">View code snippet</span></summary>
+          <div class="panel panel-border-narrow">
+            <div class="tab-panel">
+              <div class="tab-panel-menu">
+                <a href="#" class="tab-link">HTML</a>
+                <a href="#" class="tab-link">CSS</a>
+              </div>
+
+              <div class="tab-panes">
+                <div class="tab-pane">
+                  <pre class="language-markup">
+                    <code>
+                        &lt;header role="banner" id="global-header" class="with-proposition"&gt;
+                          &lt;div class="header-wrapper"&gt;
+                            &lt;div class="header-global"&gt;
+                              &lt;div class="header-logo"&gt;
+                                &lt;a href="/" title="Go to the homepage" id="logo" class="content"&gt;
+                                  &lt;img src="/public/stylesheets/images/gov.uk_logotype_crown.png" alt=""&gt;
+                                &lt;/a&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class="header-proposition"&gt;
+                              &lt;div class="content"&gt;
+                                &lt;nav id="proposition-menu" class="header__menu" role="navigation"&gt;
+                                  &lt;a href="/" id="proposition-name"&gt;Title of the service&lt;/a&gt;
+                                &lt;/nav&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/header&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane">
+                  <pre class="language-css">
+                    <code>
+                      CSS
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+      </p>
+    </div>
+  </main>
+{% endblock %}

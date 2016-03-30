@@ -1,0 +1,42 @@
+{% extends "layout_dwp.html" %}
+
+{% block page_title %}
+  DWP Elements guide
+{% endblock %}
+
+{% block content %}
+  <main id="content" role="main">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <div class="breadcrumbs">
+          <ol>
+            <li><a href="/">DWP Elements</a></li>
+            <li><a href="/form-elements">Form elements</a></li>
+          </ol>
+        </div>
+
+        <h1 class="heading-xlarge">
+          <span class="heading-secondary">DWP elements</span>
+          Form elements
+        </h1>
+
+        <p class="lede">
+          Consider that forms within staff interfaces are likely to be used
+          repetitively, every day. You may find it’s necessary to use non-standard
+          elements such as drop-down lists. Test these thoroughly before
+          implementing them.
+        </p>
+
+        <p>
+          Use the GOV.UK guidelines for all services. Don’t assume that staff
+          will understand your interface the first time they see it. Not everyone
+          will be a ‘power user’.
+        </p>
+
+        <p>
+          <a href="http://govuk-elements.herokuapp.com/form-elements/">View on GOV.UK Elements</a>
+        </p>
+      </div>
+    </div>
+  </main>
+{% endblock %}
