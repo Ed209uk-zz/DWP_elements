@@ -108,7 +108,7 @@ function ShowHideContent() {
       }
 
     });
-  }
+  };
 }
 
 $(document).ready(function() {
@@ -124,4 +124,62 @@ $(document).ready(function() {
   toggleContent.showHideRadioToggledContent();
   toggleContent.showHideCheckboxToggledContent();
 
+  // Function for tab panels
+  $("a#tab-current-sp-value").click(function() {
+      $(".tabs-nav li").removeClass("active");
+      $(this).parent().addClass("active");
+      $("#current-sp-value").show();
+      $("#contracted-out").hide();
+      $("#improve-sp-value").hide();
+      window.location.hash = "#lie-current-sp-value";
+      return false;
+  });
+     $("a#tab-contracted-out").click(function() {
+      $(".tabs-nav li").removeClass("active");
+      $(this).parent().addClass("active");
+      $("#contracted-out").show();
+      $("#improve-sp-value").hide();
+      $("#current-sp-value").hide();
+      window.location.hash = "#lie-contracted-out";
+      return false;
+  });
+  $("a#tab-improve-sp-value").click(function() {
+      $(".tabs-nav li").removeClass("active");
+      $(this).parent().addClass("active");
+      $("#improve-sp-value").show();
+      $("#contracted-out").hide();
+      $("#current-sp-value").hide();
+      window.location.hash = "#lie-improve-sp-value";
+      return false;
+  });
+
+  if(window.location.hash === "#lie-current-sp-value") {
+      $("a#tab-current-sp-value").trigger('click');
+  }
+   else if (window.location.hash === "#lie-contracted-out") {
+      $("a#tab-contracted-out").trigger('click');
+  }
+  else if (window.location.hash === "#lie-improve-sp-value") {
+      $("a#tab-improve-sp-value").trigger('click');
+  }
+
+  // Tab Panes
+  $('.tab-panes').each(function() {
+    $(this).children('div').hide();
+    $(this).children('.tab-pane:first').show();
+    $(this).parent().find('.tab-link:first').addClass('tab-link-active');
+  });
+
+  $(document).on('click', '.tab-link', function(e) {
+    e.preventDefault();
+    
+    var nth = $(this).index() + 1;
+    var target = $(this).parents('.tab-panel').find('.tab-pane:nth-child(' + nth + ')');
+
+    $(this).parents('.tab-panel').find('.tab-link').removeClass('tab-link-active');
+    $(this).addClass('tab-link-active');
+
+    $(this).parents('.tab-panel').find('.tab-panes').children().hide();
+    target.show();
+  });
 });
