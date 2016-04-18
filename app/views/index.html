@@ -115,6 +115,9 @@
       <div class="header-wrapper">
         <div class="header-global">
           <div class="header-logo">
+            <a href="/" id="logo" class="content dwplogo">
+              DWP
+            </a>
           </div>
         </div>
 
@@ -142,17 +145,21 @@
               <div class="tab-pane">
                 <pre class="language-markup">
                   <code>
-                    &lt;header role="banner" id="global-header"&gt;
+                    &lt;header role="banner" id="global-header" class="with-proposition"&gt;
                       &lt;div class="header-wrapper"&gt;
                         &lt;div class="header-global"&gt;
                           &lt;div class="header-logo"&gt;
+                            &lt;a href="/" id="logo" class="content dwplogo"&gt;
+                              DWP
+                            &lt;/a&gt;
                           &lt;/div&gt;
-                          &lt;div class="header-proposition"&gt;
-                            &lt;div class="content"&gt;
-                              &lt;nav id="proposition-menu"&gt;
-                                &lt;a href="/" id="proposition-name"&gt;&#123;&#123;serviceName&#125;&#125;&lt;/a&gt;
-                              &lt;/nav&gt;
-                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="header-proposition"&gt;
+                          &lt;div class="content"&gt;
+                            &lt;nav id="proposition-menu"&gt;
+                              &lt;a href="/" id="proposition-name"&gt;&#123;&#123;serviceName&#125;&#125;&lt;/a&gt;
+                            &lt;/nav&gt;
                           &lt;/div&gt;
                         &lt;/div&gt;
                       &lt;/div&gt;
@@ -166,6 +173,12 @@
                   <code>
                     #proposition-name {
                       font-family: 'NotoSans', arial, sans-serif !important;
+                    }
+
+                    .dwplogo {
+                      margin-top: -2px !important;
+                      font-size: 30px !important;
+                      background: none !important;
                     }
                   </code>
                 </pre>
