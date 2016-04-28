@@ -10,6 +10,15 @@
 @import 'tabs';
 // If you need to create a page as part of your journey, but without GOV.UK branding
 // See localhost:3000/examples/unbranded/
+
+@import 'example-box';
+
+h1.heading-xlarge{margin-top:40px; margin-bottom:20px;}
+
+.built-by-dwp {
+  font-size: 16px;
+}
+
 .unbranded {
   background: $white;
   // Use the universal selector and !important to *ALWAYS OVERRIDE* GDS Transport
@@ -48,18 +57,9 @@
   }
 }
 
-// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
-.heading-xlarge,
-.heading-large,
-.heading-medium,
-.heading-small,
-.lede,
-ul, p, a,
-#global-header .header-proposition #proposition-name{
-font-family: 'Noto Sans', sans-serif;
-}
-h1.heading-xlarge{margin-top:40px; margin-bottom:20px;}
-
-.built-by-dwp {
-  font-size: 16px;
+// Font Overrides
+*:not(.token) { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+#proposition-name { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important; }
+.example * {
+  font-family: 'nta', Helvetica, Arial, sans-serif !important;
 }
