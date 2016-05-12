@@ -63,3 +63,9 @@ h1.heading-xlarge{margin-top:40px; margin-bottom:20px;}
 .example * {
   font-family: 'nta', Helvetica, Arial, sans-serif !important;
 }
+
+// Secondary button
+.button-secondary {
+  @include button($grey-3);
+  padding: em(10) em(15) em(5) em(15);
+}
