@@ -58,8 +58,14 @@ h1.heading-xlarge{margin-top:40px; margin-bottom:20px;}
 }
 
 // Font Overrides
-*:not(.token) { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-#proposition-name { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important; }
+*:not(.token) { font-family: $Helvetica-Regular !important; }
+#proposition-name { font-family: $Helvetica-Regular !important; }
 .example * {
   font-family: 'nta', Helvetica, Arial, sans-serif !important;
+}
+
+// Secondary button
+.button-secondary {
+  @include button($grey-3);
+  padding: em(10) em(15) em(5) em(15);
 }
